@@ -1,3 +1,7 @@
+# 0.1.4
+
+- Fixed dependency on Helpers
+
 # 0.1.3
 
 - Fixed GitHub release
