@@ -7,7 +7,19 @@
     Copyright = '(c) 2017 Nicholas Dille. All rights reserved.'
     Description = 'Cmdlets for managing InfluxDB'
     PowerShellVersion = '5.0'
-    FunctionsToExport = '*'
+    FunctionsToExport = @(
+        'Add-InfluxDbPrivilege'
+        'Get-InfluxDbDatabase'
+        'Get-InfluxDbField'
+        'Get-InfluxDbMeasurement'
+        'Get-InfluxDbPrivilege'
+        'Get-InfluxDbUser'
+        'New-InfluxDbDatabase'
+        'New-InfluxDbUser'
+        'Remove-InfluxDbDatabase'
+        'Remove-InfluxDbPrivilege'
+        'Remove-InfluxDbUser'
+    )
     CmdletsToExport = ''
     VariablesToExport = ''
     #AliasesToExport = @()
