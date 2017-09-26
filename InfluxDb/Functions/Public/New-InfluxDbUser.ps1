@@ -3,13 +3,13 @@
 function New-InfluxDbUser {
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute(
         "PSAvoidUsingPlainTextForPassword", 
-        "", 
-        Justification = ""
+        "Password", 
+        Justification = "Convenience"
     )]
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute(
         "PSAvoidUsingUserNameAndPassWordParams", 
         "", 
-        Justification = ""
+        Justification = "Convenience"
     )]
     [CmdletBinding(SupportsShouldProcess, ConfirmImpact='Low')]
     param(
