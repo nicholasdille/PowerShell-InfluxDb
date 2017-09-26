@@ -1,3 +1,8 @@
+# 0.5.13
+
+- Updated build tools
+- Improved quality by using script analyzer
+
 # 0.5.4
 
 - Fixed dependency on Helpers
