@@ -27,7 +27,7 @@ function Remove-InfluxDbPrivilege {
     }
     
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove privilege '$Privilege' on database '$Database' for user '$User'?")) {
             Invoke-InfluxDbApi -Query "REVOKE $Privilege ON $Database FROM $User" -Method Post
         }
     }

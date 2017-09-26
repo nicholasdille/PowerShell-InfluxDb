@@ -34,7 +34,7 @@ function New-InfluxDbUser {
     }
 
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Add new user '$User'?")) {
             Invoke-InfluxDbApi -Query "CREATE USER $User WITH PASSWORD '$Password'" -Method Post
         }
     }

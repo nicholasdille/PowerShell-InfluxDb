@@ -17,7 +17,7 @@ function Remove-InfluxDbUser {
     }
 
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove user '$User'?")) {
             Invoke-InfluxDbApi -Query "DROP USER $User" -Method Post
         }
     }

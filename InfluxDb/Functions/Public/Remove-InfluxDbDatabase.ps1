@@ -17,7 +17,7 @@ function Remove-InfluxDbDatabase {
     }
 
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Remove database '$Database'?")) {
             Invoke-InfluxDbApi -Query "DROP DATABASE $Database" -Method Post
         }
     }

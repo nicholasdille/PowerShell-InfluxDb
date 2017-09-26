@@ -52,7 +52,7 @@ function New-InfluxDbDatabase {
     }
     
     process {
-        if ($Force -or $PSCmdlet.ShouldProcess("ShouldProcess?")) {
+        if ($Force -or $PSCmdlet.ShouldProcess("Add new database '$Database' (potentially with new reader and writer)?")) {
             Invoke-InfluxDbApi -Query "CREATE DATABASE $Database" -Method Post
 
             if ($PSBoundParameters.ContainsKey('ReaderUser') -and $PSBoundParameters.ContainsKey('ReaderPassword')) {
