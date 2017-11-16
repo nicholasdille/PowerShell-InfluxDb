@@ -19,6 +19,7 @@
         'Remove-InfluxDbDatabase'
         'Remove-InfluxDbPrivilege'
         'Remove-InfluxDbUser'
+        'Set-InfluxDbServer'
     )
     CmdletsToExport = ''
     VariablesToExport = ''
