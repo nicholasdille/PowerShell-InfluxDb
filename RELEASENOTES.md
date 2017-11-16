@@ -1,3 +1,7 @@
+# 0.5.14
+
+- Fixed visibility of `Set-InfluxDbServer`
+
 # 0.5.13
 
 - Updated build tools
