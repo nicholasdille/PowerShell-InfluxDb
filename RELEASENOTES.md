@@ -1,5 +1,9 @@
 # Release Notes
 
+## 0.5.14.17
+
+- Added required modules
+
 ## 0.5.14.16
 
 - Switched to four part version numbers
