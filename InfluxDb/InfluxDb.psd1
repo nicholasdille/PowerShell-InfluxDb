@@ -21,6 +21,12 @@
         'Remove-InfluxDbUser'
         'Set-InfluxDbServer'
     )
+    RequiredModules = @(
+        @{
+            ModuleName = 'WebRequest'
+            RequiredVersion = '0.2.0.26'
+        }
+    )
     CmdletsToExport = ''
     VariablesToExport = ''
     #AliasesToExport = @()
