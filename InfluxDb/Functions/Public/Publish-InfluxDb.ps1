@@ -19,7 +19,7 @@ function Publish-InfluxDb {
 
     process {
         $InputObject | ForEach-Object {
-            $Response = Microsoft.PowerShell.Utility\Invoke-RestMethod -Uri "$($InfluxDb.Server)/write?db=$Database&u=$($InfluxDb.User)&p=$($InfluxDb.Token)" -Method Post -Body "$_"
+            Microsoft.PowerShell.Utility\Invoke-RestMethod -Uri "$($InfluxDb.Server)/write?db=$Database&u=$($InfluxDb.User)&p=$($InfluxDb.Token)" -Method Post -Body "$_" | Out-Null
         }
     }
 }
