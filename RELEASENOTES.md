@@ -1,5 +1,10 @@
 # Release Notes
 
+## 0.6.0.18
+
+- Added `Remove-InfluxDbMeasurement`
+- Added `Publish-InfluxDb` to write data in the format `<Measurement>[,<tag>=<value>] <field>=<value>[,<field>=<value>] [<timestamp>}`
+
 ## 0.5.14.17
 
 - Added required modules
