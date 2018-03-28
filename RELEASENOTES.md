@@ -1,6 +1,6 @@
 # Release Notes
 
-## 0.7.0.21
+## 0.7.0.22
 
 - GitHub only support TLS 1.2 now
 - Added management of subscriptions
