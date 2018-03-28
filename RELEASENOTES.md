@@ -1,5 +1,10 @@
 # Release Notes
 
+## 0.7.0.21
+
+- GitHub only support TLS 1.2 now
+- Added management of subscriptions
+
 ## 0.6.0.20
 
 - Added `Remove-InfluxDbMeasurement`
