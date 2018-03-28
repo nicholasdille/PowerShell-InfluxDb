@@ -1,6 +1,6 @@
-@{
+﻿@{
     RootModule = 'InfluxDb.psm1'
-    ModuleVersion = '0.6.0'
+    ModuleVersion = '0.5.14.17'
     GUID = '509f5167-efb3-4cd2-b9ca-2bbe12d30393'
     Author = 'Nicholas Dille'
     # CompanyName = ''
@@ -13,11 +13,14 @@
         'Get-InfluxDbField'
         'Get-InfluxDbMeasurement'
         'Get-InfluxDbPrivilege'
+        'Get-InfluxDbSubscription'
         'Get-InfluxDbUser'
         'New-InfluxDbDatabase'
         'New-InfluxDbUser'
         'Remove-InfluxDbDatabase'
+        'Remove-InfluxDbMeasurement'
         'Remove-InfluxDbPrivilege'
+        'Remove-InfluxDbSubscription'
         'Remove-InfluxDbUser'
         'Set-InfluxDbServer'
     )
