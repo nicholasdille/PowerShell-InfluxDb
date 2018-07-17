@@ -21,6 +21,10 @@ function Invoke-InfluxDbApi {
     )
 
     $InfluxDb = Get-InfluxDbServer
+    $AuthString = Get-BasicAuthentication -User $InfluxDb.User -Token $InfluxDb.Token
+    $Headers = @{
+        Authorization = "Basic $AuthString"
+    }
 
     $Url = "$($InfluxDb.Server)/query?pretty=true"
     $Url += "&q=$Query"
@@ -31,9 +35,9 @@ function Invoke-InfluxDbApi {
     $ConfiguredProtocols = [System.Net.ServicePointManager]::SecurityProtocol
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]'Tls11,Tls12'
 
-    $Response = Invoke-AuthenticatedWebRequest -Uri $Url -Method $Method -User $InfluxDb.User -Token $InfluxDb.Token
+    $Response = Invoke-WebRequest -Uri $Url -Method $Method -Headers $Headers
     $Content = $Response.Content | ConvertFrom-Json
-    
+
     [System.Net.ServicePointManager]::SecurityProtocol = $ConfiguredProtocols
 
     foreach ($Result in $Content.results.series) {

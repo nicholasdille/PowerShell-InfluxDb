@@ -26,8 +26,8 @@
     )
     RequiredModules = @(
         @{
-            ModuleName = 'WebRequest'
-            RequiredVersion = '0.2.0.26'
+            ModuleName = 'Helpers'
+            RequiredVersion = '0.4.0.24'
         }
     )
     CmdletsToExport = ''
